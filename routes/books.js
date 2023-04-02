@@ -65,6 +65,7 @@ router.route('/update/:id')
         books[idx].module = req.body.data.module
 
         saveAll('books', books)
+        alert("Updated!")
         res.redirect('/books')
 
         res.json({ updated: true })
